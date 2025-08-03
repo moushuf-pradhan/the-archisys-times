@@ -10,7 +10,12 @@
 			"@/*": ["./src/*"],
 			"@routes/*": ["./src/routes/*"],
 			"@layouts/*": ["./src/layouts/*"],
-			"@components/*": ["./src/components/*"]
+			"@components/*": ["./src/components/*"],
+			"@constants/*": ["./src/utils/constants/*"],
+			"@types/*": ["./src/utils/types/*"],
+			"@enums/*": ["./src/utils/enums/*"],
+			"@hooks/*": ["./src/utils/hooks/*"],
+			"@utils/*": ["./src/utils/*"]
 		},
 
 		/* Bundler mode */

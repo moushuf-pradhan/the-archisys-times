@@ -1,5 +1,7 @@
 import { Link } from 'react-router';
 
+import { truncate } from '@utils/functions/global';
+
 import type { NewsCardPropsI } from './NewsCard.types';
 
 export default function NewsCard({
@@ -16,13 +18,16 @@ export default function NewsCard({
 				loading="lazy"
 			/>
 			<div className="p-4">
-				<h2 className="text-xl font-semibold mb-2">{heading}</h2>
-				<p className="text-gray-600">{description}</p>
 				<Link
 					to="/detail"
-					className="text-blue-600 hover:underline mt-2 inline-block"
+					className="hover:text-gray-600 mt-2 inline-block"
 				>
-					Read More
+					<h2 className="text-xl font-secondary font-semibold mb-2">
+						{heading}
+					</h2>
+					<p className="text-gray-600">
+						{truncate(description, 150)}
+					</p>
 				</Link>
 			</div>
 		</div>

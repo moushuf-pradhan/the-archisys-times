@@ -18,6 +18,7 @@
 
 @theme {
 	--font-logo: 'Stalemate', cursive;
+	--font-secondary: 'Merriweather', serif;
 	--color-text-dark: '#222222';
 	--color-text-light: '#666666';
 }
