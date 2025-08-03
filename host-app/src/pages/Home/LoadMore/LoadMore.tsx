@@ -3,7 +3,9 @@ import useLogic from './useLogic';
 
 export default function LoadMore() {
 	// Hooks
-	const { isFetchingNews, handlePaginate } = useLogic();
+	const { isFetchingNews, handlePaginate, noData } = useLogic();
+
+	if (noData) return null;
 
 	return (
 		<div className="text-center mt-12 ">

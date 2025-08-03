@@ -1,9 +1,13 @@
+import NoData from '@/components/common/NoData/NoData';
+
 import NewsCard from './NewsCard/NewsCard';
 import useLogic from './useLogic';
 
 export default function News() {
 	// Hooks
-	const { news } = useLogic();
+	const { news, noData } = useLogic();
+
+	if (noData) return <NoData />;
 
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

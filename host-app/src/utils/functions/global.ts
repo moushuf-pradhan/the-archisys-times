@@ -44,3 +44,26 @@ export function formatDate(isoString?: string): string {
 		year: 'numeric', // Full year (e.g., 2025)
 	});
 }
+
+/**
+ * Creates a debounced version of a function that delays its execution until after a specified wait time.
+ * Only the last call within the wait period is executed.
+ * @param func The function to debounce, accepting string arguments.
+ * @param wait The number of milliseconds to wait before executing the function.
+ * @returns A debounced function that accepts string arguments.
+ */
+export function debounce<T extends (...args: string[]) => void>(
+	func: T,
+	wait: number
+): (...args: string[]) => void {
+	// Store the timeout ID for cancellation
+	let timeout: NodeJS.Timeout;
+
+	// Return a new function that handles debouncing
+	return (...args: string[]) => {
+		// Clear any existing timeout to reset the wait period
+		clearTimeout(timeout);
+		// Set a new timeout to execute the function after the wait period
+		timeout = setTimeout(() => func(...args), wait);
+	};
+}

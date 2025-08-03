@@ -3,6 +3,7 @@ import Loader from '@/components/common/Loader/Loader';
 import useLogic from './useLogic';
 import News from './News/News';
 import LoadMore from './LoadMore/LoadMore';
+import Search from './Search/Search';
 
 export default function Home() {
 	// Hooks
@@ -13,6 +14,7 @@ export default function Home() {
 
 	return (
 		<>
+			<Search />
 			<News />
 			<LoadMore />
 		</>

@@ -6,7 +6,10 @@ export default function useLogic() {
 	const { incPage } = useNewsContext();
 
 	// Hooks
-	const { isFetching: isFetchingNews } = useFetchNews();
+	const { data: news, isFetching: isFetchingNews } = useFetchNews();
+
+	// Constants
+	const noData: boolean = news?.length === 0;
 
 	// Functions
 	function handlePaginate() {
@@ -16,5 +19,6 @@ export default function useLogic() {
 	return {
 		isFetchingNews,
 		handlePaginate,
+		noData,
 	};
 }

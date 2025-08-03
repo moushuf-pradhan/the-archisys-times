@@ -4,7 +4,11 @@ export default function useLogic() {
 	// Hooks
 	const { data: news } = useFetchNews();
 
+	// Constants
+	const noData = news?.length === 0;
+
 	return {
 		news,
+		noData,
 	};
 }

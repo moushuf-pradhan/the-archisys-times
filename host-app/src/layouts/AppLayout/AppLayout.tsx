@@ -4,10 +4,10 @@ import AppBody from './AppBody/AppBody';
 
 export default function AppLayout() {
 	return (
-		<div>
+		<>
 			<Header />
 			<NavBar />
 			<AppBody />
-		</div>
+		</>
 	);
 }
