@@ -7,10 +7,10 @@ import useLogic from './useLogic';
 
 export default function Home() {
 	// Hooks
-	const { news, isFetchingNews } = useLogic();
+	const { news, isFetchingNews, handlePaginate, hasNews } = useLogic();
 
 	// Loading state
-	if (isFetchingNews) return <Loader />;
+	if (isFetchingNews && !hasNews) return <Loader />;
 
 	return (
 		<>
@@ -25,7 +25,9 @@ export default function Home() {
 				))}
 			</div>
 			<div className="text-center mt-12 ">
-				<Button>Load more</Button>
+				<Button onClick={handlePaginate} loading={isFetchingNews}>
+					Load more
+				</Button>
 			</div>
 		</>
 	);

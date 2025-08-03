@@ -1,5 +1,6 @@
-import type { ReactNode } from 'react';
+import type { HtmlHTMLAttributes, ReactNode } from 'react';
 
-export interface ButtonPropsI {
+export interface ButtonPropsI extends HtmlHTMLAttributes<HTMLDivElement> {
 	children: ReactNode;
+	loading?: boolean;
 }

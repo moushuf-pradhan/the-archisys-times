@@ -5,3 +5,7 @@ export interface ResI {
 	totalResults: number;
 	articles: ArticleI[];
 }
+
+export interface ReqI {
+	page: number;
+}

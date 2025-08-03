@@ -1,9 +1,10 @@
+import { styles } from './Button.styles';
 import type { ButtonPropsI } from './Button.types';
 
-export default function Button({ children }: ButtonPropsI) {
+export default function Button({ children, loading, ...rest }: ButtonPropsI) {
 	return (
-		<div className="inline-block px-4 py-2 border-1 border-gray-500 rounded-sm mx-auto cursor-pointer hover:bg-gray-50">
-			{children}
+		<div className={styles.wrapper} {...rest}>
+			{loading ? 'Loading...' : children}
 		</div>
 	);
 }
