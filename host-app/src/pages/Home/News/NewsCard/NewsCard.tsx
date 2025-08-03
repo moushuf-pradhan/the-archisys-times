@@ -3,12 +3,16 @@ import { Link } from 'react-router';
 import { truncate } from '@utils/functions/global';
 
 import type { NewsCardPropsI } from './NewsCard.types';
+import useLogic from './useLogic';
 
 export default function NewsCard({
 	image,
 	heading,
 	description,
 }: NewsCardPropsI) {
+	// Hooks
+	const { slug } = useLogic(heading);
+
 	return (
 		<div className="bg-white rounded-sm shadow-md overflow-hidden">
 			<img
@@ -19,7 +23,7 @@ export default function NewsCard({
 			/>
 			<div className="p-4">
 				<Link
-					to="/detail"
+					to={`/${slug}`}
 					className="hover:text-gray-600 mt-2 inline-block"
 				>
 					<h2 className="text-xl font-secondary font-semibold mb-2">

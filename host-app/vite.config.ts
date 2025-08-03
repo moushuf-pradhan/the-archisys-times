@@ -16,6 +16,7 @@ export default defineConfig({
 			'@types': path.resolve(__dirname, './src/utils/types'),
 			'@enums': path.resolve(__dirname, './src/utils/enums'),
 			'@hooks': path.resolve(__dirname, './src/utils/hooks'),
+			'@functions': path.resolve(__dirname, './src/utils/functions'),
 			'@utils': path.resolve(__dirname, './src/utils'),
 		},
 	},

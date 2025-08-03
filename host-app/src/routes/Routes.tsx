@@ -3,6 +3,7 @@ import { BrowserRouter, Routes as ReactRoutes, Route } from 'react-router';
 import Home from '@/pages/Home/Home';
 import AppLayout from '@layouts/AppLayout/AppLayout';
 import NewsContextProvider from '@/utils/contexts/News/provider';
+import NewsDetail from '@/pages/NewsDetail/NewsDetail';
 
 export default function Routes() {
 	return (
@@ -17,7 +18,7 @@ export default function Routes() {
 							</NewsContextProvider>
 						}
 					/>
-					<Route path="detail" element={<p>Detail</p>} />
+					<Route path=":slug" element={<NewsDetail />} />
 				</Route>
 			</ReactRoutes>
 		</BrowserRouter>

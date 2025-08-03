@@ -16,6 +16,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+p {
+	margin-bottom: 16px;
+}
+
 @theme {
 	--font-logo: 'Stalemate', cursive;
 	--font-secondary: 'Merriweather', serif;

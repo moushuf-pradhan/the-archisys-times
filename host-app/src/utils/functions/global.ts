@@ -11,3 +11,36 @@ export function truncate(text: string, maxLength: number): string {
 	// Slice the text to maxLength and append ellipsis
 	return text.slice(0, maxLength) + '...';
 }
+
+/**
+ * Converts a text string to a URL-friendly format.
+ * @param text - The input string to be converted.
+ * @returns A URL-friendly string with lowercase letters, numbers, and hyphens.
+ */
+export function slugify(text?: string): string {
+	// Guard clause
+	if (!text) return '';
+
+	// Convert to lowercase, replace non-alphanumeric with hyphens, remove leading/trailing hyphens
+	return text
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-') // Replace special characters and spaces with a single hyphen
+		.replace(/(^-|-$)/g, ''); // Remove leading or trailing hyphens
+}
+
+/**
+ * Converts an ISO 8601 date string to a formatted date string.
+ * @param isoString - The ISO 8601 date string (e.g., "2025-08-02T07:37:08Z").
+ * @returns A formatted date string in the format "Month DD, YYYY" (e.g., "August 03, 2025").
+ */
+export function formatDate(isoString?: string): string {
+	// Guard clause
+	if (!isoString) return '';
+
+	// Parse the ISO string and format it to "Month DD, YYYY" using en-US locale
+	return new Date(isoString).toLocaleDateString('en-US', {
+		month: 'long', // Full month name (e.g., August)
+		day: '2-digit', // Two-digit day (e.g., 03)
+		year: 'numeric', // Full year (e.g., 2025)
+	});
+}

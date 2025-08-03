@@ -15,6 +15,7 @@
 			"@types/*": ["./src/utils/types/*"],
 			"@enums/*": ["./src/utils/enums/*"],
 			"@hooks/*": ["./src/utils/hooks/*"],
+			"@functions/*": ["./src/utils/functions/*"],
 			"@utils/*": ["./src/utils/*"]
 		},
 
