@@ -2,9 +2,9 @@ import axios from '@/utils/axios/axios';
 import { ENDPOINT } from '@/utils/constants/endpoints/endpoints';
 import type { ArticleI } from '@/utils/types/news';
 
-import type { ReqI } from './types';
+import type { NewsParamsI } from '@/utils/contexts/News/types';
 
-export async function fetchNews(params: ReqI): Promise<ArticleI[]> {
+export async function fetchNews(params: NewsParamsI): Promise<ArticleI[]> {
 	const url = ENDPOINT.news.read.path;
 
 	const res = await axios({

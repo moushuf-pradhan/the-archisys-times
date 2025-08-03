@@ -9,7 +9,7 @@ export default {
 	read: {
 		key: 'fetch_news',
 		path: `${ENV_API_BASE_URL}/v2/top-headlines`,
-		method: HTTP_METHOD.GET as string,
+		method: HTTP_METHOD.GET,
 	},
 	// readById: {
 	// 	path: `${API_BASE_URL}/users/:userId`,

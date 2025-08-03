@@ -6,6 +6,4 @@ export interface ResI {
 	articles: ArticleI[];
 }
 
-export interface ReqI {
-	page: number;
-}
+// export interface ReqI {}
