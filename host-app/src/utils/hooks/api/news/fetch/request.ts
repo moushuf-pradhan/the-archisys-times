@@ -17,13 +17,7 @@ export async function fetchNews(params: NewsParamsI): Promise<ArticleI[]> {
 		},
 	});
 
-	const resData = res?.data?.articles;
-
-	// Handle errors
-	// if (resData?.response?.error) {
-	// }
-
-	const data = resData;
+	const data = res?.data?.articles;
 
 	return data;
 }

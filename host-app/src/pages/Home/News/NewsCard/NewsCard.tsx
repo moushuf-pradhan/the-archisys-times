@@ -17,14 +17,14 @@ export default function NewsCard({
 		<div className="bg-white rounded-sm shadow-md overflow-hidden">
 			<img
 				src={image}
-				alt="News 1"
+				alt="News preview"
 				className="w-full h-48 object-cover"
 				loading="lazy"
 			/>
 			<div className="p-4">
 				<Link
 					to={`/${slug}`}
-					className="hover:text-gray-600 mt-2 inline-block"
+					className="hover:text-gray-500 mt-2 inline-block hover:gray-200"
 				>
 					<h2 className="text-xl font-secondary font-semibold mb-2">
 						{heading}
