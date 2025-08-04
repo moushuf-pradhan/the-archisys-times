@@ -1,6 +1,7 @@
 import Loader from '@/components/common/Loader/Loader';
 import FakeContent from './FakeContent/FakeContent';
 import useLogic from './useLogic';
+import Back from './Back/Back';
 
 export default function NewsDetail() {
 	const { title, content, author, publishedAtFormatted, isLoading } =
@@ -10,6 +11,7 @@ export default function NewsDetail() {
 
 	return (
 		<div className="max-w-[800px] mx-auto">
+			<Back />
 			<h1 className="text-4xl font-secondary font-bold mb-4 leading-[1.5] break-all">
 				{title}
 			</h1>
