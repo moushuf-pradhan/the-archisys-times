@@ -11,6 +11,16 @@
 			"types": "./dist/Button.d.ts",
 			"import": "./dist/Button.es.js",
 			"require": "./dist/Button.umd.js"
+		},
+		"./Loader": {
+			"types": "./dist/Loader.d.ts",
+			"import": "./dist/Loader.es.js",
+			"require": "./dist/Loader.umd.js"
+		},
+		"./NoData": {
+			"types": "./dist/NoData.d.ts",
+			"import": "./dist/NoData.es.js",
+			"require": "./dist/NoData.umd.js"
 		}
 	},
 	"sideEffects": false,

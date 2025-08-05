@@ -1,4 +1,4 @@
-import Loader from '@/components/common/Loader/Loader';
+import Loader from '@archisys/ui-components/Loader';
 
 import FakeContent from './FakeContent/FakeContent';
 import useLogic from './useLogic';

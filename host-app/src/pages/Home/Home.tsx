@@ -1,4 +1,4 @@
-import Loader from '@/components/common/Loader/Loader';
+import Loader from '@archisys/ui-components/Loader';
 
 import useLogic from './useLogic';
 import News from './News/News';

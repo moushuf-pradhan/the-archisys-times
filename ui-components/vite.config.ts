@@ -10,6 +10,8 @@ export default defineConfig({
 		lib: {
 			entry: {
 				Button: path.resolve(__dirname, 'src/components/Button/Button'),
+				Loader: path.resolve(__dirname, 'src/components/Loader/Loader'),
+				NoData: path.resolve(__dirname, 'src/components/NoData/NoData'),
 			},
 			name: 'ui-components',
 			fileName: (format, entryName) => `${entryName}.${format}.js`,

@@ -1,4 +1,4 @@
-import NoData from '@/components/common/NoData/NoData';
+import NoData from '@archisys/ui-components/NoData';
 
 import NewsCard from './NewsCard/NewsCard';
 import useLogic from './useLogic';
