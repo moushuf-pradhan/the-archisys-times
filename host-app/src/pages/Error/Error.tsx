@@ -1,17 +1,16 @@
 import { Link } from 'react-router';
 
+import { classes } from './Error.styles';
+
 export default function Error() {
 	return (
-		<div className=" flex items-center justify-center">
-			<div className="text-center">
-				<p className="text-2xl mt-4">Something Went Wrong</p>
-				<p className="text-gray-600 mt-2">
+		<div className={classes.wrapper}>
+			<div className={classes.inner}>
+				<p className={classes.heading}>Something Went Wrong</p>
+				<p className={classes.subheading}>
 					An unexpected error occurred. Please try again later.
 				</p>
-				<Link
-					to="/"
-					className="inline-block px-4 py-2  bg-gray-700 text-white rounded-sm mx-auto cursor-pointer hover:bg-gray-600"
-				>
+				<Link to="/" className={classes.action}>
 					Go to Home
 				</Link>
 			</div>

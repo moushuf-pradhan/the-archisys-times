@@ -1,5 +1,7 @@
 import Button from '@/components/common/Button/Button';
+
 import useLogic from './useLogic';
+import { classes } from './LoadMore.styles';
 
 export default function LoadMore() {
 	// Hooks
@@ -8,7 +10,7 @@ export default function LoadMore() {
 	if (noData) return null;
 
 	return (
-		<div className="text-center mt-12 ">
+		<div className={classes.wrapper}>
 			<Button onClick={handlePaginate} loading={isFetchingNews}>
 				Load more
 			</Button>

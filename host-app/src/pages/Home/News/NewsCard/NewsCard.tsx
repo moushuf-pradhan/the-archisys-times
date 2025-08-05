@@ -2,8 +2,9 @@ import { Link } from 'react-router';
 
 import { truncate } from '@utils/functions/global';
 
-import type { NewsCardPropsI } from './NewsCard.types';
 import useLogic from './useLogic';
+import { classes } from './NewsCard.styles';
+import type { NewsCardPropsI } from './NewsCard.types';
 
 export default function NewsCard({
 	image,
@@ -14,22 +15,17 @@ export default function NewsCard({
 	const { slug } = useLogic(heading);
 
 	return (
-		<div className="bg-white rounded-sm shadow-md overflow-hidden">
+		<div className={classes.wrapper}>
 			<img
 				src={image}
 				alt="News preview"
-				className="w-full h-48 object-cover"
+				className={classes.image}
 				loading="lazy"
 			/>
 			<div className="p-4">
-				<Link
-					to={`/${slug}`}
-					className="hover:text-gray-500 mt-2 inline-block hover:gray-200"
-				>
-					<h2 className="text-xl font-secondary font-semibold mb-2">
-						{heading}
-					</h2>
-					<p className="text-gray-600">
+				<Link to={`/${slug}`} className={classes.link}>
+					<h2 className={classes.heading}>{heading}</h2>
+					<p className={classes.description}>
 						{truncate(description, 150)}
 					</p>
 				</Link>

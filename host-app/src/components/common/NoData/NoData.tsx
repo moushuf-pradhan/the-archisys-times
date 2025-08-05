@@ -1,12 +1,13 @@
 import Icon from './Icon';
-import type { NoDataPropsI } from './NoData.types';
+import { classes } from './NoData.styles';
 import { defaultMsg } from './NoData.utils';
+import type { NoDataPropsI } from './NoData.types';
 
 export default function NoData({ message = defaultMsg }: NoDataPropsI) {
 	return (
-		<div className="flex flex-col items-center justify-center h-full text-gray-500">
+		<div className={classes.wrapper}>
 			<Icon />
-			<p className="text-xl">{message}</p>
+			<p className={classes.message}>{message}</p>
 		</div>
 	);
 }

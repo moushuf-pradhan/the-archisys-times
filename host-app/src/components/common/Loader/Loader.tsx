@@ -1,3 +1,5 @@
+import { classes } from './Loader.styles';
+
 export default function Loader() {
-	return <div className="flex justify-center h-full">Loading...</div>;
+	return <div className={classes.wrapper}>Loading...</div>;
 }

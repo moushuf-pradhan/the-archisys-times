@@ -1,8 +1,10 @@
 import { Outlet } from 'react-router';
 
+import { classes } from './AppBody.styles';
+
 export default function AppBody() {
 	return (
-		<main className="px-6 pt-10 pb-20 max-w-[1200px] mx-auto">
+		<main className={classes.wrapper}>
 			<Outlet />
 		</main>
 	);

@@ -2,6 +2,7 @@ import NoData from '@/components/common/NoData/NoData';
 
 import NewsCard from './NewsCard/NewsCard';
 import useLogic from './useLogic';
+import { classes } from './News.styles';
 
 export default function News() {
 	// Hooks
@@ -10,7 +11,7 @@ export default function News() {
 	if (noData) return <NoData />;
 
 	return (
-		<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div className={classes.wrapper}>
 			{news?.map((item, index) => (
 				<NewsCard
 					key={index}
