@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+:root {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+
+	color-scheme: light dark;
+	color: #333333;
+	background-color: #ffffff;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin-bottom: 16px;
+}
+
+@theme {
+	--font-logo: 'Stalemate', cursive;
+	--font-secondary: 'Merriweather', serif;
+	--color-text-dark: '#222222';
+	--color-text-light: '#666666';
+}

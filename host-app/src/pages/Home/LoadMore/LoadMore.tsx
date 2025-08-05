@@ -1,4 +1,4 @@
-import Button from '@/components/common/Button/Button';
+import Button from '@archisys/ui-components/Button';
 
 import useLogic from './useLogic';
 import { classes } from './LoadMore.styles';
