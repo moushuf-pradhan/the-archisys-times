@@ -21,7 +21,7 @@ p {
 }
 
 @theme {
-	--font-logo: 'Stalemate', cursive;
+	--font-logo: 'Google Sans Code', monospace;
 	--font-secondary: 'Merriweather', serif;
 	--color-text-dark: '#222222';
 	--color-text-light: '#666666';

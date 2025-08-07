@@ -3,7 +3,6 @@ import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import federation from '@originjs/vite-plugin-federation';
-// import packageJson from './package.json';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,10 +15,9 @@ export default defineConfig({
 			exposes: {
 				'./Home': './src/exports/Home.tsx',
 				'./NewsDetail': './src/exports/NewsDetail.tsx',
-				// './Error': './src/pages/Error/Error.tsx',
+				'./Error': './src/pages/Error/Error.tsx',
 			},
 			shared: ['react', 'react-dom', 'react-router'],
-			// shared: packageJson.dependencies,
 		}),
 	],
 	resolve: {

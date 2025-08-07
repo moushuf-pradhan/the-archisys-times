@@ -1,16 +1,13 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
 import NewsContextProvider from '@/utils/contexts/News/provider';
 import NewsDetail from '@/pages/NewsDetail/NewsDetail';
+import Provider from '@/components/Provider';
 
 export default function HomeContainer() {
-	const queryClient = new QueryClient();
-
 	return (
-		<QueryClientProvider client={queryClient}>
+		<Provider>
 			<NewsContextProvider>
 				<NewsDetail />
 			</NewsContextProvider>
-		</QueryClientProvider>
+		</Provider>
 	);
 }

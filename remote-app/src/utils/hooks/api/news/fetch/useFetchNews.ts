@@ -1,4 +1,4 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router';
 
 import useNewsContext from '@/utils/contexts/News/useNewsContext';
@@ -18,7 +18,6 @@ export function useFetchNews() {
 	const res = useQuery<ArticleI[], Error>({
 		queryKey: [ENDPOINT.news.read.key, params],
 		queryFn: () => fetchNews(params),
-		placeholderData: keepPreviousData,
 		retry: 0,
 	});
 
