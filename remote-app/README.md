@@ -14,7 +14,8 @@ Ensure the following dependencies are installed:
 
 Please run the commands in the following order
 
-1.  `yarn`: Install project dependencies
-2.  `yalc add @archisys/ui-components`: Install the shared ui-components package from the local registry
-3.  `yarn build`: Generate a production build for the host app
-4.  `yarn preview`: This should automatically serve the app on port `8081`
+1.  Make sure that you are navigated to the `remote-app` directory on your terminal
+2.  `yarn`: Install project dependencies
+3.  `yalc add @archisys/ui-components`: Install the shared ui-components package from the local registry
+4.  `yarn build`: Generate a production build for the host app
+5.  `yarn preview`: This should automatically serve the app on port `8081`

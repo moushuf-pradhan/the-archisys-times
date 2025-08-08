@@ -14,6 +14,7 @@ Ensure the following dependencies are installed:
 
 Please run the commands in the following order
 
-1.  `yarn`: Install project dependencies
-2.  `yarn build`: Generate a production build
-3.  `yalc publish`: Publish the package to the local Yalc registry
+1.  Make sure that you are navigated to the `ui-components` directory on your terminal
+2.  `yarn`: Install project dependencies
+3.  `yarn build`: Generate a production build
+4.  `yalc publish`: Publish the package to the local Yalc registry

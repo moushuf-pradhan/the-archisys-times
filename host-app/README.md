@@ -14,7 +14,8 @@ Ensure the following dependencies are installed:
 
 Please run the commands in the following order
 
-1.  `yarn`: Install project dependencies
-2.  `yarn dev`: This should automatically run the app on port `8080`
+1.  Make sure that you are navigated to the `host-app` directory on your terminal
+2.  `yarn`: Install project dependencies
+3.  `yarn dev`: This should automatically run the app on port `8080`
 
 Please visit `localhost:8080` on your browser to view the application.
