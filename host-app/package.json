@@ -11,7 +11,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@archisys/ui-components": "file:.yalc/@archisys/ui-components",
     "@tanstack/react-query": "^5.84.1",
     "axios": "^1.11.0",
     "react": "^19.1.0",

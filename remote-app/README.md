@@ -15,8 +15,9 @@ Ensure the following dependencies are installed:
 Please run the commands in the following order
 
 1.  Make sure that you are navigated to the `remote-app` directory on your terminal
-2.  `yarn`: Install project dependencies
+2.  Add your api key for the newsapi service on the `.env.production` file
 3.  `yalc add @archisys/ui-components`: Install the shared ui-components package from the local registry
-4.  Add your api key for the newsapi service on the `.env.production` file
+4.  `yarn`: Install project dependencies
 5.  `yarn build`: Generate a production build for the host app
 6.  `yarn preview`: This should automatically serve the app on port `8081`
+7.  Leave the server running
