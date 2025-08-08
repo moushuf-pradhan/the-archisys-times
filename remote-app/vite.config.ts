@@ -3,6 +3,9 @@ import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import federation from '@originjs/vite-plugin-federation';
+import { visualizer } from 'rollup-plugin-visualizer';
+
+import { getManualChunks } from './src/utils/functions/global';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -18,6 +21,9 @@ export default defineConfig({
 				'./Error': './src/pages/Error/Error.tsx',
 			},
 			shared: ['react', 'react-dom', 'react-router'],
+		}),
+		visualizer({
+			open: false,
 		}),
 	],
 	resolve: {
@@ -38,6 +44,17 @@ export default defineConfig({
 		target: 'esnext',
 		// minify: false,
 		cssCodeSplit: false,
+		rollupOptions: {
+			output: {
+				manualChunks: id =>
+					getManualChunks(id, [
+						{
+							match: 'chunk-',
+							output: 'manual_chunk',
+						},
+					]),
+			},
+		},
 	},
 	preview: {
 		port: 8081,

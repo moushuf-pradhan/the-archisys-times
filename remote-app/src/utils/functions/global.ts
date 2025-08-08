@@ -1,3 +1,5 @@
+import type { chunkMapping_I } from './types';
+
 /**
  * Truncates a string to a specified length and appends an ellipsis if the string exceeds the maximum length.
  * @param text - The input string to truncate.
@@ -66,4 +68,20 @@ export function debounce<T extends (...args: string[]) => void>(
 		// Set a new timeout to execute the function after the wait period
 		timeout = setTimeout(() => func(...args), wait);
 	};
+}
+
+export function getManualChunks(id: string, chunkMappings: chunkMapping_I[]) {
+	if (!id.includes('node_modules')) return;
+
+	const packageNamePath = id.split('node_modules/')[1].toLowerCase();
+	// const packageName = packageNamePath.split('/')[0];
+
+	// Find the matching chunk configuration
+	const chunk = chunkMappings.find(({ match }) =>
+		packageNamePath.includes(match?.toLowerCase())
+	);
+
+	// Return the output chunk name or default to 'vendor'
+	const outputFile = chunk?.output || chunk?.name;
+	return chunk ? outputFile : 'vendor';
 }

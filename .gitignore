@@ -26,5 +26,7 @@ dist-ssr
 .yalc
 yalc.*
 
+stats.html
+
 
 .__mf__temp
