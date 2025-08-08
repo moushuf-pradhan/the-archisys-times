@@ -17,4 +17,4 @@ Please run the commands in the following order
 1.  `yarn`: Install project dependencies
 2.  `yalc add @archisys/ui-components`: Install the shared ui-components package from the local registry
 3.  `yarn build`: Generate a production build for the host app
-4.  `yalc preview`: Serve the static remoteEntry.js file. The app should be serve on port `8081`
+4.  `yarn preview`: This should automatically serve the app on port `8081`
