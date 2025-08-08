@@ -1,10 +1,10 @@
-import { useFetchNews } from '@hooks/api/news/fetch/useFetchNews';
+import useNewsContext from '@/utils/contexts/News/useNewsContext';
 
 export default function useLogic() {
-	const { data: news, isFetching: isFetchingNews } = useFetchNews();
+	// @ts-expect-error // Add types later
+	const { hasNews, isLoadingNews } = useNewsContext();
 
-	// Constants
-	const hasNews: boolean = news ? news?.length > 0 : false;
+	const showLoader = isLoadingNews && !hasNews;
 
-	return { hasNews, isFetchingNews };
+	return { showLoader };
 }

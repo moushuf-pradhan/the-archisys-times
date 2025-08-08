@@ -4,11 +4,11 @@ import { debounce } from '@/utils/functions/global';
 export default function useLogic() {
 	// Global states
 	// @ts-expect-error // Add types later
-	const { setParams } = useNewsContext();
+	const { updateParams } = useNewsContext();
 
 	// Functions
 	const handleSearch = debounce((value: string) => {
-		setParams({ q: value });
+		updateParams({ q: value });
 	}, 400);
 
 	function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {

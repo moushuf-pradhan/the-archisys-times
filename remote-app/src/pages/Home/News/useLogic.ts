@@ -1,14 +1,12 @@
-import { useFetchNews } from '@utils/hooks/api/news/fetch/useFetchNews';
+import useNewsContext from '@/utils/contexts/News/useNewsContext';
 
 export default function useLogic() {
-	// Hooks
-	const { data: news } = useFetchNews();
-
-	// Constants
-	const noData = news?.length === 0;
+	// Global states
+	// @ts-expect-error // Add types later
+	const { news, noNews } = useNewsContext();
 
 	return {
 		news,
-		noData,
+		noNews,
 	};
 }

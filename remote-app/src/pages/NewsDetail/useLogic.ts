@@ -1,12 +1,16 @@
-import { formatDate } from '@/utils/functions/global';
-import { useFetchNews } from '@/utils/hooks/api/news/fetch/useFetchNews';
-import { NewsModel } from '@/utils/models/NewsModel';
 import { useParams } from 'react-router';
 
+import useNewsContext from '@/utils/contexts/News/useNewsContext';
+import { formatDate } from '@/utils/functions/global';
+import { NewsModel } from '@/utils/models/NewsModel';
+
 export default function useLogic() {
+	// Global states
+	// @ts-expect-error // Add types later
+	const { news: allNews } = useNewsContext();
+
 	// Hooks
 	const { slug } = useParams();
-	const { data: allNews } = useFetchNews();
 
 	// Constants
 	const news = new NewsModel(allNews);

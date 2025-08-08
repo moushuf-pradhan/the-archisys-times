@@ -5,9 +5,9 @@ import { classes } from './LoadMore.styles';
 
 export default function LoadMore() {
 	// Hooks
-	const { isFetchingNews, handlePaginate, noData } = useLogic();
+	const { isFetchingNews, handlePaginate, returnNull } = useLogic();
 
-	if (noData) return null;
+	if (returnNull) return null;
 
 	return (
 		<div className={classes.wrapper}>

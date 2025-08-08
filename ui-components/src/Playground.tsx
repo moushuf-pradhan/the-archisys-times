@@ -1,9 +1,9 @@
-import Button from './components/Button/Button';
+import NoData from './components/NoData/NoData';
 
 export default function App() {
 	return (
 		<>
-			<Button>Submit</Button>
+			<NoData />
 		</>
 	);
 }

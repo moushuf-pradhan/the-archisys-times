@@ -4,25 +4,25 @@ import useLogic from './useLogic';
 import News from './News/News';
 import LoadMore from './LoadMore/LoadMore';
 import Search from './Search/Search';
-// import { lazy, Suspense } from 'react';
-
-// const Test = lazy(() => import('archisys_remote/Test'));
 
 export default function Home() {
 	// Hooks
-	const { isFetchingNews, hasNews } = useLogic();
+	const { showLoader } = useLogic();
 
 	// Loading state
-	if (isFetchingNews && !hasNews) return <Loader />;
+	// if (showLoader) return <Loader />;
 
 	return (
 		<>
-			{/* <Suspense fallback="Loading...">
-				<Test />
-			</Suspense> */}
 			<Search />
-			<News />
-			<LoadMore />
+			{showLoader ? (
+				<Loader />
+			) : (
+				<>
+					<News />
+					<LoadMore />
+				</>
+			)}
 		</>
 	);
 }

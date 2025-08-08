@@ -1,25 +1,22 @@
 import useNewsContext from '@/utils/contexts/News/useNewsContext';
-import { useFetchNews } from '@/utils/hooks/api/news/fetch/useFetchNews';
 
 export default function useLogic() {
 	// Global states
 	// @ts-expect-error // Add types later
-	const { incPage } = useNewsContext();
-
-	// Hooks
-	const { data: news, isFetching: isFetchingNews } = useFetchNews();
+	const { noNews, isFetchingNews, fetchNextPage, hasNextPage } =
+		useNewsContext();
 
 	// Constants
-	const noData: boolean = news?.length === 0;
+	const returnNull = noNews || !hasNextPage;
 
 	// Functions
 	function handlePaginate() {
-		incPage();
+		fetchNextPage();
 	}
 
 	return {
 		isFetchingNews,
 		handlePaginate,
-		noData,
+		returnNull,
 	};
 }

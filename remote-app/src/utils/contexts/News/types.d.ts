@@ -5,11 +5,6 @@ export interface ProviderProps {
 }
 
 export interface NewsParamsI {
-	page: number;
+	page?: number;
+	q?: '';
 }
-
-// export interface ReturnI {
-// 	params: NewsParamsI;
-// 	setParams: (update: NewsParamsI) => void;
-// 	incPage: () => void;
-// }
