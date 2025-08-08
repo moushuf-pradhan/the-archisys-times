@@ -12,6 +12,7 @@ Ensure the following dependencies are installed:
 
 1.  **Node.js** (Latest version recommended, minimum v18.x)
 2.  **Yarn** (Install globally: `npm i -g yarn`)
+3.  **Yalc** (Install globally: `npm i -g yalc`)
 
 ## Setup Instructions
 
